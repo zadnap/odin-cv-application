@@ -1,0 +1,37 @@
+@use './variables' as *;
+
+.headline {
+  color: $theme-color;
+  padding-left: 30px;
+  padding-bottom: 50px;
+  border-left: 2px solid $theme-color;
+
+  h1 {
+    position: relative;
+    font-weight: 900;
+    font-size: 5rem;
+    margin-bottom: 10px;
+
+    span {
+      &:first-child {
+        font-weight: 400;
+      }
+    }
+  }
+
+  h1::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -40px;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background-color: $theme-color;
+  }
+
+  p {
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+}
