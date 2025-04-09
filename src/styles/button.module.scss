@@ -1,0 +1,22 @@
+@use './variables' as *;
+
+.button {
+  cursor: pointer;
+  outline: none;
+  border: 1px solid $theme-color;
+  padding: 5px 7px;
+  color: $theme-color;
+  transition: transform ease 0.3s, color ease 0.3s, background-color ease 0.3s;
+  font-size: 2rem;
+  background-color: transparent;
+  border-radius: 5px;
+
+  &:hover {
+    color: white;
+    background-color: $theme-color;
+  }
+
+  &:active {
+    transform: scale(1.1);
+  }
+}
