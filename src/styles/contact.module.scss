@@ -1,0 +1,17 @@
+@use './variables' as *;
+
+.contact {
+  list-style-type: none;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  .icon {
+    font-size: 2rem;
+    color: $theme-color;
+    width: 2rem;
+    text-align: center;
+  }
+  .content {
+    font-weight: 400;
+  }
+}
