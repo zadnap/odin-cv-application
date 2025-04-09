@@ -1,6 +1,16 @@
 @use '@/styles/variables' as *;
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
   width: 40%;
-  background-color: $theme-color;
+  background-color: white;
+  padding-top: $vertical-padding;
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-left: $horizontal-padding;
+  }
 }
