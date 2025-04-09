@@ -1,5 +1,5 @@
 import styles from '@/styles/avatar.module.scss';
-import avatarSrc from '@/assets/default-avatar.png';
+import avatarSrc from '@/assets/default-avatar.jpg';
 
 function Avatar() {
   return (
