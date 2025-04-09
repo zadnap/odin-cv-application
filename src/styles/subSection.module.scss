@@ -1,0 +1,15 @@
+@use './variables' as *;
+
+.subSection {
+  padding: 15px 0;
+  .title {
+    display: flex;
+    justify-content: space-between;
+    color: $theme-color;
+    font-weight: 900;
+    font-size: 1.7rem;
+  }
+  p {
+    margin-top: 10px;
+  }
+}
