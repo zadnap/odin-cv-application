@@ -1,12 +1,10 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import './index.scss';
-import Page from './components/Page';
-import ButtonGroup from './components/ButtonGroup';
+import './main.scss';
+import App from './App';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Page />
-    <ButtonGroup />
+    <App />
   </StrictMode>
 );
