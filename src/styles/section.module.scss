@@ -37,7 +37,10 @@
     .children {
       display: flex;
       flex-direction: column;
-      gap: 25px;
+      gap: 10px;
+      &:has(.section) {
+        gap: 25px;
+      }
     }
   }
 

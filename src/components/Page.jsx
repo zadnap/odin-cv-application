@@ -9,8 +9,11 @@ import Section from './Section';
 import Contact from './Contact';
 import Headline from './Headline';
 import Avatar from './Avatar';
+import { useState } from 'react';
 
 function Page() {
+  const [isEditing, setIsEditing] = useState(true);
+
   return (
     <section className={styles.page}>
       <aside className={styles.sidebar}>
@@ -21,106 +24,94 @@ function Page() {
             lastName="SMITH"
             position="ART DIRECTOR"
           />
-          <Section title="CONTACT">
+          <Section isEditing={isEditing} title="CONTACT">
             <Contact
               icon={<FontAwesomeIcon icon={faPhone} />}
               content="+00 123 456 789"
+              info="Phone number"
+              isEditing={isEditing}
             />
             <Contact
               icon={<FontAwesomeIcon icon={faLocationDot} />}
-              content="567 STREET, NY"
+              content="567 STREET, NY "
+              info="Address"
+              isEditing={isEditing}
             />
             <Contact
               icon={<FontAwesomeIcon icon={faEnvelope} />}
               content="LOREMIPSUM@MAIL.COM"
+              info="Email"
+              isEditing={isEditing}
             />
           </Section>
-          <Section title="REFERENCES">
-            <Section title="LOREM IPSUM">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
-              modi blanditiis.
-            </Section>
-            <Section title="LOREM IPSUM">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
-              modi blanditiis.
-            </Section>
+          <Section isEditing={isEditing} title="REFERENCES">
+            <Section
+              isEditing={isEditing}
+              title="LOREM IPSUM"
+              description="Lorem ipsum, dolor sit amet consectetur adipisicing"
+            ></Section>
+            <Section
+              isEditing={isEditing}
+              title="LOREM IPSUM"
+              description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro modi blanditiis."
+            ></Section>
           </Section>
-          <Section title="LANGUAGE">
-            <Section title="LOREM IPSUM">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
-              modi blanditiis.
-            </Section>
-            <Section title="LOREM IPSUM">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
-              modi blanditiis.
-            </Section>
+          <Section isEditing={isEditing} title="LANGUAGE">
+            <Section
+              isEditing={isEditing}
+              title="LOREM IPSUM"
+              description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro modi blanditiis."
+            ></Section>
           </Section>
         </div>
       </aside>
-      <section className={styles.main}>
+      <section isEditing={isEditing} className={styles.main}>
         <Section
+          isEditing={isEditing}
           title="ABOUT ME"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, aut.
-            Nemo vero repellat omnis quidem? Saepe quod sit enim assumenda
-            possimus itaque vero non voluptas minima tempora. Corporis,
-            obcaecati impedit."
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, aut. Nemo vero repellat omnis quidem? Saepe quod sit enim assumenda possimus itaque vero non voluptas minima tempora. Corporis, obcaecati impedit."
         >
-          <Section title="LOREM IPSUM">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-            reprehenderit ratione quibusdam quaerat minus amet culpa
-            consectetur, modi accusamus officia quam. Error, voluptatem
-            repellat. Saepe rem dicta autem fugit expedita!
-          </Section>
+          <Section
+            isEditing={isEditing}
+            title="LOREM IPSUM"
+            description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro modi blanditiis."
+          ></Section>
         </Section>
-        <Section title="EDUCATION">
-          <Section title="LOREM IPSUM">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-            reprehenderit ratione quibusdam quaerat minus amet culpa
-            consectetur, modi accusamus officia quam. Error, voluptatem
-            repellat. Saepe rem dicta autem fugit expedita!
-          </Section>
-          <Section title="LOREM IPSUM">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-            reprehenderit ratione quibusdam quaerat minus amet culpa
-            consectetur, modi accusamus officia quam. Error, voluptatem
-            repellat. Saepe rem dicta autem fugit expedita!
-          </Section>
-          <Section title="LOREM IPSUM">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-            reprehenderit ratione quibusdam quaerat minus amet culpa
-            consectetur, modi accusamus officia quam. Error, voluptatem
-            repellat. Saepe rem dicta autem fugit expedita!
-          </Section>
+        <Section isEditing={isEditing} title="EDUCATION">
+          <Section
+            isEditing={isEditing}
+            title="LOREM IPSUM"
+            description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro modi blanditiis."
+          ></Section>
+          <Section
+            isEditing={isEditing}
+            title="LOREM IPSUM"
+            description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro modi blanditiis."
+          ></Section>
         </Section>
-        <Section title="EXPERIENCE">
-          <Section title="LOREM IPSUM">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-            reprehenderit ratione quibusdam quaerat minus amet culpa
-            consectetur, modi accusamus officia quam. Error, voluptatem
-            repellat. Saepe rem dicta autem fugit expedita!
-          </Section>
-          <Section title="LOREM IPSUM">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-            reprehenderit ratione quibusdam quaerat minus amet culpa
-            consectetur, modi accusamus officia quam. Error, voluptatem
-            repellat. Saepe rem dicta autem fugit expedita!
-          </Section>
-          <Section title="LOREM IPSUM">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-            reprehenderit ratione quibusdam quaerat minus amet culpa
-            consectetur, modi accusamus officia quam. Error, voluptatem
-            repellat. Saepe rem dicta autem fugit expedita!
-          </Section>
+        <Section isEditing={isEditing} title="EXPERIENCE">
+          <Section
+            isEditing={isEditing}
+            title="LOREM IPSUM"
+            description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro modi blanditiis."
+          ></Section>
+          <Section
+            isEditing={isEditing}
+            title="LOREM IPSUM"
+            description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro modi blanditiis."
+          ></Section>
         </Section>
-        <Section title="SKILLS">
-          <Section title="LOREM IPSUM">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-            reprehenderit ratione quibusdam.
-          </Section>
-          <Section title="LOREM IPSUM">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-            reprehenderit ratione quibusdam.
-          </Section>
+        <Section isEditing={isEditing} title="SKILLS">
+          <Section
+            isEditing={isEditing}
+            title="LOREM IPSUM"
+            description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro modi blanditiis."
+          ></Section>
+          <Section
+            isEditing={isEditing}
+            title="LOREM IPSUM"
+            description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro modi blanditiis."
+          ></Section>
         </Section>
       </section>
     </section>
