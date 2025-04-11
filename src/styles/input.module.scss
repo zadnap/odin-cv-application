@@ -1,8 +1,31 @@
+.inputWrapper {
+  position: relative;
+  display: inline-block;
+}
+
 .input {
   font: inherit;
   color: inherit;
   outline: none;
   border: none;
   padding: 0;
-  border-bottom: 1px solid currentColor;
+  border-bottom: 1px solid transparent;
+  opacity: 0.8;
+  transition: border-color ease 0.3s, opacity ease 0.3s;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    border-color: currentColor;
+  }
+}
+
+.hiddenSpan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  white-space: pre;
+  font: inherit;
+  padding: 4px 8px;
 }
