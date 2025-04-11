@@ -1,5 +1,6 @@
 import styles from '@/styles/section.module.scss';
 import Input from './Input';
+import TextArea from './TextArea';
 
 function Section({ title, description, isEditing, children }) {
   return (
@@ -18,7 +19,19 @@ function Section({ title, description, isEditing, children }) {
         </h1>
       )}
       <div className={styles.content}>
-        {description && <div className={styles.description}>{description}</div>}
+        {description && (
+          <div className={styles.description}>
+            {isEditing ? (
+              <TextArea
+                placeholder={description}
+                ariaLabel="Edit Description"
+                value={description}
+              />
+            ) : (
+              <span className={styles.text}>{description}</span>
+            )}
+          </div>
+        )}
         {children && <div className={styles.children}>{children}</div>}
       </div>
     </section>

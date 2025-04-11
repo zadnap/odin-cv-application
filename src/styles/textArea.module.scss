@@ -1,0 +1,19 @@
+.textArea {
+  font: inherit;
+  color: inherit;
+  outline: none;
+  border: none;
+  border-right: 1px solid transparent;
+  padding: 0;
+  width: 100%;
+  resize: none;
+  overflow: hidden;
+  opacity: 0.8;
+  transition: border-color ease 0.3s, opacity ease 0.3s;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    border-color: currentColor;
+  }
+}
