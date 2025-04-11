@@ -1,8 +1,20 @@
 @use './styles/reset';
+@use './styles/variables' as *;
 
 html {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-weight: 300;
   font-style: normal;
   font-size: 62.5%;
+}
+
+body {
+  ::-moz-selection {
+    color: white;
+    background-color: $theme-color;
+  }
+  ::selection {
+    color: white;
+    background-color: $theme-color;
+  }
 }
