@@ -8,8 +8,8 @@ function App() {
     <div className="app">
       <Page />
       <div className="button-group">
-        <Button icon={faPen} />
-        <Button icon={faDownload} />
+        <Button icon={faPen} action="Edit CV" />
+        <Button icon={faDownload} action="Download" />
       </div>
     </div>
   );

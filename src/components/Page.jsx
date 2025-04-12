@@ -12,15 +12,15 @@ import Avatar from './Avatar';
 import { useState } from 'react';
 
 function Page() {
-  const [isEditing, setIsEditing] = useState(false);
+  const [isEditing, setIsEditing] = useState(true);
 
   return (
     <section className={styles.page}>
       <aside className={styles.sidebar}>
         <Avatar />
         <div className={styles.info}>
-          <Headline content="Hoang Thu Ha" isEditing={isEditing}>
-            <Headline content="Event Manager" isEditing={isEditing} />
+          <Headline content="HOANG THU HA" isEditing={isEditing}>
+            <Headline content="EVENT MANAGER" isEditing={isEditing} />
           </Headline>
           <Section isEditing={isEditing} title="CONTACT">
             <Contact
