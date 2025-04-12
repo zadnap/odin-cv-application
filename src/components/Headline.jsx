@@ -1,12 +1,21 @@
 import styles from '@/styles/headline.module.scss';
+import TextArea from './TextArea';
 
-function Headline({ firstName, lastName, position }) {
+function Headline({ content, isEditing, children }) {
   return (
     <section className={styles.headline}>
-      <h1>
-        <span>{firstName}</span> <span>{lastName}</span>
+      <h1 className={styles.content}>
+        {isEditing ? (
+          <TextArea
+            placeholder={content}
+            value={content}
+            ariaLabel="Edit Content"
+          />
+        ) : (
+          <span className={styles.text}>{content}</span>
+        )}
       </h1>
-      <p>{position}</p>
+      {children}
     </section>
   );
 }

@@ -2,24 +2,20 @@
 
 .headline {
   color: $theme-color;
+  padding-right: 30px;
   padding-left: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   border-left: 2px solid $theme-color;
 
-  h1 {
+  .content {
+    text-transform: uppercase;
     position: relative;
-    font-weight: 900;
+    font-weight: 600;
     font-size: 5rem;
-    margin-bottom: 10px;
-
-    span {
-      &:first-child {
-        font-weight: 400;
-      }
-    }
+    margin-bottom: 15px;
   }
 
-  h1::after {
+  .content::after {
     position: absolute;
     content: '';
     top: 0;
@@ -30,8 +26,18 @@
     background-color: $theme-color;
   }
 
-  p {
-    font-size: 2.5rem;
-    font-weight: 500;
+  .headline {
+    padding: 0;
+    border: none;
+
+    .content {
+      font-size: 2.5rem;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .content::after {
+      display: none;
+    }
   }
 }
