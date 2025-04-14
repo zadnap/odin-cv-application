@@ -1,9 +1,10 @@
 import styles from '@/styles/headline.module.scss';
 import TextArea from './TextArea';
 
-function Headline({ name, content, isEditing, children }) {
+function Headline({ name, content, isSubHeadline, isEditing }) {
+  const className = `${styles.headline} ${isSubHeadline && styles.subHeadline}`;
   return (
-    <section className={styles.headline}>
+    <section className={className}>
       <h1 className={styles.content}>
         {isEditing ? (
           <TextArea
@@ -15,7 +16,6 @@ function Headline({ name, content, isEditing, children }) {
           <span className={styles.text}>{content}</span>
         )}
       </h1>
-      {children}
     </section>
   );
 }
