@@ -1,10 +1,13 @@
 import styles from '@/styles/contact.module.scss';
 import Input from './Input';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Contact({ info, icon, content, onChange, isEditing }) {
   return (
     <li className={styles.contact}>
-      <span className={styles.icon}>{icon}</span>
+      <span className={styles.icon}>
+        <FontAwesomeIcon icon={icon} />
+      </span>
       <p className={styles.content}>
         {isEditing ? (
           <Input
