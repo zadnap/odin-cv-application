@@ -1,6 +1,9 @@
 @use './variables' as *;
 
 .avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   padding: 10px;
   border-radius: 50%;
@@ -11,5 +14,21 @@
     object-fit: cover;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
+  }
+
+  .avatarInput {
+    display: none;
+  }
+
+  .avatarInputLabel {
+    cursor: pointer;
+    font-size: 4rem;
+    color: $theme-color;
+    position: absolute;
+    transition: transform ease 0.3s;
+
+    &:active {
+      transform: scale(0.9);
+    }
   }
 }
