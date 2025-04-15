@@ -34,12 +34,25 @@
     font-size: 1.5rem;
     line-height: 1.5;
 
+    .icon {
+      font-size: 2rem;
+      color: $theme-color;
+      width: 3rem;
+      margin-right: 5px;
+      text-align: center;
+    }
+
     .children {
       display: flex;
       flex-direction: column;
       gap: 10px;
+
       &:has(.section) {
         gap: 25px;
+      }
+
+      &:has(.icon) {
+        gap: 10px;
       }
     }
   }
