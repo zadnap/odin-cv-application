@@ -3,21 +3,30 @@ import Input from './Input';
 import TextArea from './TextArea';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-function Section({ title, icon, description, isEditing, children }) {
+function Section({
+  title,
+  icon,
+  description,
+  isEditing,
+  onChangeTitle,
+  onChangeDesc,
+  children,
+}) {
   return (
     <section className={styles.section}>
-      {title && (
-        <h1>
+      {!icon && title && (
+        <span className={styles.title}>
           {isEditing ? (
             <Input
               placeholder={title}
               ariaLabel={`Edit ${title}`}
               value={title}
+              onChange={onChangeTitle}
             />
           ) : (
-            <span className={styles.text}>{title}</span>
+            <h1 className={styles.text}>{title}</h1>
           )}
-        </h1>
+        </span>
       )}
       <div className={styles.content}>
         {description && (
@@ -27,6 +36,7 @@ function Section({ title, icon, description, isEditing, children }) {
                 placeholder={description}
                 ariaLabel="Edit Description"
                 value={description}
+                onChange={onChangeDesc}
               />
             ) : (
               <span className={styles.text}>
