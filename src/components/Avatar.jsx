@@ -8,17 +8,19 @@ function Avatar({ src, onChange, isEditing }) {
     <div className={styles.avatar}>
       <img src={src || avatarSrc} alt="User's Avatar" />
       {isEditing && (
-        <label htmlFor="avatarInput" className={styles.avatarInputLabel}>
-          <FontAwesomeIcon icon={faCameraRetro} />
-        </label>
+        <>
+          <label htmlFor="avatarInput" className={styles.avatarInputLabel}>
+            <FontAwesomeIcon icon={faCameraRetro} />
+          </label>
+          <input
+            className={styles.avatarInput}
+            type="file"
+            id="avatarInput"
+            accept="image/*"
+            onChange={onChange}
+          />
+        </>
       )}
-      <input
-        className={styles.avatarInput}
-        type="file"
-        id="avatarInput"
-        accept="image/*"
-        onChange={onChange}
-      />
     </div>
   );
 }
