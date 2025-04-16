@@ -5,18 +5,16 @@ function Headline({ name, content, isSubHeadline, isEditing, onChange }) {
   const className = `${styles.headline} ${isSubHeadline && styles.subHeadline}`;
   return (
     <section className={className}>
-      <h1 className={styles.content}>
-        {isEditing ? (
-          <TextArea
-            placeholder={content}
-            value={content}
-            ariaLabel={`Edit ${name}`}
-            onChange={onChange}
-          />
-        ) : (
-          <span className={styles.text}>{content}</span>
-        )}
-      </h1>
+      {isEditing ? (
+        <TextArea
+          placeholder={content}
+          value={content}
+          ariaLabel={`Edit ${name}`}
+          onChange={onChange}
+        />
+      ) : (
+        <h1 className={styles.text}>{content}</h1>
+      )}
     </section>
   );
 }

@@ -4,21 +4,18 @@
   color: $theme-color;
   padding-right: 30px;
   padding-left: 30px;
+  padding-bottom: 15px;
   border-left: 2px solid $theme-color;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 600;
+  font-size: 5rem;
 
-  .content {
-    text-transform: uppercase;
-    position: relative;
-    font-weight: 600;
-    font-size: 5rem;
-    margin-bottom: 15px;
-  }
-
-  .content::after {
+  &::after {
     position: absolute;
     content: '';
     top: 0;
-    left: -40px;
+    left: -10px;
     width: 19px;
     height: 19px;
     border-radius: 50%;
@@ -27,13 +24,11 @@
 }
 
 .subHeadline {
-  .content {
-    font-size: 2.5rem;
-    font-weight: 400;
-    margin: 0;
-  }
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0;
 
-  .content::after {
+  &::after {
     display: none;
   }
 }
