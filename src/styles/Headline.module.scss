@@ -1,18 +1,21 @@
 .headline {
+  margin-bottom: 30px;
+
   .name,
   .title {
     text-transform: uppercase;
     border-bottom: 1px solid #b5b5b5;
-    padding: 10px 0;
+    padding: 15px 0;
   }
   .name {
-    font-size: 3rem;
+    font-size: 2rem;
     letter-spacing: 15px;
     span {
       display: block;
     }
   }
   .title {
+    font-size: 1rem;
     font-weight: 500;
     letter-spacing: 7px;
   }
