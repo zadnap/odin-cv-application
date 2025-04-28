@@ -1,2 +1,9 @@
+@use './styles/variables' as *;
+
 .app {
+  background-color: $background-color;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
 }
