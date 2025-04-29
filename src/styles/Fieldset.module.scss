@@ -1,0 +1,18 @@
+.fieldset {
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f6f6f6;
+
+  .legend {
+    font-size: 1rem;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
