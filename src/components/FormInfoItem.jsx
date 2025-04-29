@@ -1,7 +1,11 @@
 import styles from '@/styles/FormInfoItem.module.scss';
 
-function FormInfoItem({ text }) {
-  return <div className={styles.formInfoItem}>{text}</div>;
+function FormInfoItem({ text, onClick }) {
+  return (
+    <button className={styles.formInfoItem} onClick={onClick}>
+      {text || 'Untitled'}
+    </button>
+  );
 }
 
 export default FormInfoItem;
