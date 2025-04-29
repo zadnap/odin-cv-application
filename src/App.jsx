@@ -50,7 +50,7 @@ function App() {
 
   return (
     <div className={styles.app}>
-      <EditForm cvData={cvData} />
+      <EditForm cvData={cvData} setCvData={setCvData} />
       <Resume cvData={cvData} />
     </div>
   );

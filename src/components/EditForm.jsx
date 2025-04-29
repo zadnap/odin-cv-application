@@ -4,33 +4,58 @@ import Input from './Input';
 import Button from './Button';
 import FormInfoItem from './FormInfoItem';
 
-function EditForm() {
+function EditForm({ cvData, setCvData }) {
+  const handleEditPersonal = (e, field) =>
+    setCvData((prev) => ({
+      ...prev,
+      personal: { ...prev.personal, [field]: e.target.value },
+    }));
+
   return (
     <form className={styles.editForm} onSubmit={(e) => e.preventDefault()}>
       <Fieldset legend="Personal Details">
-        <Input name="Full name" />
-        <Input name="Title" />
-        <Input name="About" />
-        <Input name="Address" />
-        <Input name="Email" />
-        <Input name="Phone" />
-      </Fieldset>
-      <Fieldset legend="Experience">
-        <FormInfoItem text="Soft Design Studios" />
-        <FormInfoItem text="Soft Design Studios" />
-        <FormInfoItem text="Soft Design Studios" />
-        <Button>Add</Button>
+        <Input
+          name="Full Name"
+          value={cvData.personal.fullname}
+          onChange={(e) => handleEditPersonal(e, 'fullname')}
+        />
+        <Input
+          name="Title"
+          value={cvData.personal.title}
+          onChange={(e) => handleEditPersonal(e, 'title')}
+        />
+        <Input
+          name="About Me"
+          value={cvData.personal.aboutMe}
+          onChange={(e) => handleEditPersonal(e, 'aboutMe')}
+        />
+        <Input
+          name="Address"
+          value={cvData.personal.address}
+          onChange={(e) => handleEditPersonal(e, 'address')}
+        />
+        <Input
+          name="Email"
+          value={cvData.personal.email}
+          onChange={(e) => handleEditPersonal(e, 'email')}
+        />
+        <Input
+          name="Phone"
+          value={cvData.personal.phone}
+          onChange={(e) => handleEditPersonal(e, 'phone')}
+        />
       </Fieldset>
       <Fieldset legend="Education">
-        <Input name="School" />
-        <Input name="Degree" />
-        <Input name="Start Date" />
-        <Input name="End Date" />
-        <Input name="Description" />
-        <div className={styles.buttonGroup}>
-          <Button>Cancel</Button>
-          <Button>Add</Button>
-        </div>
+        {cvData.education.map((edu) => (
+          <FormInfoItem text={edu.school} />
+        ))}
+        <Button>Add</Button>
+      </Fieldset>
+      <Fieldset legend="Experience">
+        {cvData.experience.map((exp) => (
+          <FormInfoItem text={exp.company} />
+        ))}
+        <Button>Add</Button>
       </Fieldset>
       <div className={styles.buttonGroup}>
         <Button>Clear</Button>
