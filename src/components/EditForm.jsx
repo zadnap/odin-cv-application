@@ -11,6 +11,21 @@ function EditForm({ cvData, setCvData }) {
       personal: { ...prev.personal, [field]: e.target.value },
     }));
 
+  const handleClearCv = () => {
+    setCvData({
+      personal: {
+        fullname: '',
+        title: '',
+        aboutMe: '',
+        address: '',
+        email: '',
+        phone: '',
+      },
+      education: [],
+      experience: [],
+    });
+  };
+
   return (
     <form className={styles.editForm} onSubmit={(e) => e.preventDefault()}>
       <Fieldset legend="Personal Details">
@@ -58,7 +73,7 @@ function EditForm({ cvData, setCvData }) {
         <Button>Add</Button>
       </Fieldset>
       <div className={styles.buttonGroup}>
-        <Button>Clear</Button>
+        <Button onClick={handleClearCv}>Clear</Button>
         <Button>Download</Button>
       </div>
     </form>
