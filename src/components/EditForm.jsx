@@ -62,13 +62,13 @@ function EditForm({ cvData, setCvData }) {
       </Fieldset>
       <Fieldset legend="Education">
         {cvData.education.map((edu) => (
-          <FormInfoItem text={edu.school} />
+          <FormInfoItem text={edu.school} key={edu.id} />
         ))}
         <Button>Add</Button>
       </Fieldset>
       <Fieldset legend="Experience">
         {cvData.experience.map((exp) => (
-          <FormInfoItem text={exp.company} />
+          <FormInfoItem text={exp.company} key={exp.id} />
         ))}
         <Button>Add</Button>
       </Fieldset>

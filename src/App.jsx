@@ -16,6 +16,7 @@ function App() {
     },
     education: [
       {
+        id: 0,
         school: 'University of Lorem',
         degree: 'Certificate of Webtraining',
         start: 2015,
@@ -23,6 +24,7 @@ function App() {
         desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sit',
       },
       {
+        id: 1,
         school: 'University of Lorem',
         degree: 'Certificate of Webtraining',
         start: 2015,
@@ -32,6 +34,7 @@ function App() {
     ],
     experience: [
       {
+        id: 0,
         company: 'Soft Design Studios',
         title: 'Graphic Designer',
         start: 2015,
@@ -39,6 +42,7 @@ function App() {
         desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sit',
       },
       {
+        id: 1,
         company: 'Soft Design Studios',
         title: 'Graphic Designer',
         start: 2015,

@@ -21,6 +21,7 @@ function Resume({ cvData }) {
           <Section title="Education">
             {cvData.education.map((edu) => (
               <InfoItem
+                key={edu.id}
                 title={edu.degree}
                 subtitle={edu.school}
                 from={edu.start}
@@ -32,6 +33,7 @@ function Resume({ cvData }) {
           <Section title="Experiences">
             {cvData.experience.map((exp) => (
               <InfoItem
+                key={exp.id}
                 title={exp.title}
                 subtitle={exp.company}
                 from={exp.start}
