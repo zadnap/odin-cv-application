@@ -1,0 +1,18 @@
+.infoItem {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 20px;
+  row-gap: 10px;
+
+  .title,
+  .subtitle {
+    text-transform: uppercase;
+    font-weight: 400;
+    align-content: center;
+  }
+
+  .desc,
+  .dateRange {
+    font-size: 0.9rem;
+  }
+}
