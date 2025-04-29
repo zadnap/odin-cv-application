@@ -202,7 +202,6 @@ function EditForm({ cvData, setCvData }) {
       </Fieldset>
       <div className={styles.buttonGroup}>
         <Button onClick={handleClearCv}>Clear</Button>
-        <Button>Download</Button>
       </div>
     </form>
   );
